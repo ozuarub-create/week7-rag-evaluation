@@ -1,113 +1,96 @@
-# RAG Evaluation Dataset
+--- paste below into evaluation_dataset.md ---
+# RAG Evaluation Dataset (Week 7) — 30 questions
 
-## Instructions
-Each question below is designed to test whether the RAG system retrieves the correct source
-and produces a grounded, faithful answer.
+Each question below lists the expected source document (if known). Mark "Not documented" where the KB does not contain the info.
 
----
+1. Q: What type of documents are used as the knowledge base?  
+   Expected Source: BASELINE.md
 
-## Question 1
-**Question:**  
-What does the RAG system do when no relevant information is found in the knowledge base?
+2. Q: Where are the knowledge base documents stored?  
+   Expected Source: Not documented
 
-**Expected Source:**  
-Not documented
+3. Q: Does the system return a refusal when no supporting evidence is found?  
+   Expected Source: evaluation_results.md
 
----
+4. Q: How does the system handle queries with empty input?  
+   Expected Source: Not documented
 
-## Question 2
-**Question:**  
-What type of retrieval method does the RAG system use?
+5. Q: What retrieval method does the system use?  
+   Expected Source: BASELINE.md
 
-**Expected Source:**  
-BASELINE.md — Retrieval section
+6. Q: How does the system log failed retrievals?  
+   Expected Source: Not documented
 
----
+7. Q: Does the system block answers that lack sources?  
+   Expected Source: Not documented
 
-## Question 3
-**Question:**  
-What type of documents are used as the knowledge base?
+8. Q: What specific logging is performed when a query fails?  
+   Expected Source: Not documented
 
-**Expected Source:**  
-BASELINE.md — Knowledge Base section
+9. Q: Does the system add a source citation for every answer?  
+   Expected Source: evaluation_results.md
 
----
+10. Q: What is the expected failure message when there is no evidence?  
+    Expected Source: evaluation_results.md
 
-## Question 4
-**Question:**  
-Where are the knowledge base documents stored?
+11. Q: How does the system limit answer length for long retrievals?  
+    Expected Source: Not documented
 
-**Expected Source:**  
-BASELINE.md — Knowledge Base section
+12. Q: Is input query length validated (max tokens/characters)?  
+    Expected Source: Not documented
 
----
+13. Q: What happens if retrieval returns irrelevant documents?  
+    Expected Source: evaluation_dataset.md
 
-## Question 5
-**Question:**  
-Does the system use a system prompt to control generation?
+14. Q: Which documents were cited for Question 3 in the evaluation run?  
+    Expected Source: evaluation_results.md
 
-**Expected Source:**  
-BASELINE.md — Generation section
+15. Q: Are there examples in the dataset where the system refused correctly?  
+    Expected Source: evaluation_results.md
 
----
+16. Q: Is there an explicit system prompt in the project?  
+    Expected Source: BASELINE.md
 
-## Question 6
-**Question:**  
-Can the system hallucinate when retrieved context is weak?
+17. Q: What are the known issues listed for the system baseline?  
+    Expected Source: BASELINE.md
 
-**Expected Source:**  
-BASELINE.md — Known Issues section
+18. Q: How are document chunks created (size / overlap)?  
+    Expected Source: Not documented
 
----
+19. Q: Is there a fallback answer template described?  
+    Expected Source: evaluation_report.md
 
-## Question 7
-**Question:**  
-What happens if the user submits an empty query?
+20. Q: Does the evaluation dataset cover retrieval errors?  
+    Expected Source: evaluation_dataset.md
 
-**Expected Source:**  
-Not documented
+21. Q: What behavior is expected if multiple documents disagree?  
+    Expected Source: Not documented
 
----
+22. Q: Are there examples of hallucinated answers in the results?  
+    Expected Source: evaluation_results.md
 
-## Question 8
-**Question:**  
-What specific logging is performed when a query fails?
+23. Q: Is there a designated log file location described?  
+    Expected Source: Not documented
 
-**Expected Source:**  
-Not documented
+24. Q: What was the system's result for the question "What type of documents are used..."?  
+    Expected Source: evaluation_results.md
 
----
+25. Q: Are there tests for empty or whitespace-only queries?  
+    Expected Source: Not documented
 
-## Question 9
-**Question:**  
-Does the system block responses that lack valid sources?
+26. Q: Does the evaluation include questions about retrieval latency?  
+    Expected Source: Not documented
 
-**Expected Source:**  
-Not documented
+27. Q: Were any guardrails added to the system this week (documented)?  
+    Expected Source: evaluation_report.md
 
----
+28. Q: What format should source citations use in answers?  
+    Expected Source: Not documented
 
-## Question 10
-**Question:**  
-What is the maximum allowed length of a user query?
+29. Q: Does the system require answers to include the file name as source?  
+    Expected Source: evaluation_results.md
 
-**Expected Source:**  
-Not documented
+30. Q: If no document matches, what string should the system return?  
+    Expected Source: evaluation_results.md
 
----
-
-## Question 11
-**Question:**  
-What happens when the retrieval step returns irrelevant documents?
-
-**Expected Source:**  
-Not documented
-
----
-
-## Question 12
-**Question:**  
-Does the system return a refusal when it cannot find supporting evidence?
-
-**Expected Source:**  
-Not documented
+--- end file ---
